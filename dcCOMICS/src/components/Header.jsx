@@ -14,10 +14,15 @@ const links = [
 function Nav() {
     return (
         <nav>
-            <ul>
+            <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                 {links.map(link => (
-                    <li key={link.id} className={link.current ? 'current' : ''}>
-                        <a href={link.url}>{link.text}</a>
+                    <li key={link.id} className="nav-item">
+                        <a
+                            className={`nav-link ${link.current ? 'active fw-bold border-bottom border-primary' : ''}`}
+                            href={link.url}
+                        >
+                            {link.text}
+                        </a>
                     </li>
                 ))}
             </ul>
@@ -28,10 +33,22 @@ function Nav() {
 
 export default function Header() {
     return (
-        <header className="header">
-            <img src="img/dc-logo.png" alt="DC Comics Logo" className="logo" />
-            <Nav />
+        <header>
+            <nav className="navbar navbar-expand-lg bg-white">
+                <div className="container">
+                    <a className="navbar-brand" href="#">
+                        <img
+                            src="img/dc-logo.png"
+                            alt="DC Comics Logo"
+                            style={{ height: '60px' }}
+                        />
+                    </a>
+
+                    <Nav />
+                </div>
+            </nav>
         </header>
-    )
+    );
 }
+
 
