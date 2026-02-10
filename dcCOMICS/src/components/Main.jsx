@@ -1,4 +1,5 @@
 
+import COMICS from "./Comics";
 
 const info = [
     { id: 1, text: "DIGITAL COMICS", img: "/img/buy-comics-digital-comics.png" },
@@ -84,7 +85,7 @@ export default function Main() {
     return (
         <main>
             <div className="bg-dark text-white py-5">
-                <h4 className="ms-5 fw-bold mb-0">Content goes here</h4>
+                <COMICS />
             </div>
             <Info />
 
