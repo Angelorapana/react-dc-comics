@@ -1,4 +1,5 @@
 import "./GruppoCard.css";
+import SingolaCard from "./SingolaCard";
 
 const comics = [
     {
@@ -154,16 +155,15 @@ const comics = [
         writers: ["Joëlle Jones"],
     },
 ];
+
+
 function ComicsPage() {
     return (
         <>
-            <div className="bg-comics">
-            </div>
-
-            <div className="bg-dark">
-                <div className="row">
+            <div className="text-white">
+                <div className="row p-3">
                     {comics.map(comic => (
-                        <div key={comic.id} className="col-4 mb-4">
+                        <div key={comic.id} className="col-2 m-3">
                             <div className="bg-dark text-white card h-100 comics-card">
                                 <img
                                     src={comic.thumb}
@@ -178,8 +178,13 @@ function ComicsPage() {
                             </div>
                         </div>
                     ))}
+                    <SingolaCard
+                        datiCard={{
+                            title: "Homer Simpson",
+                            thumb: "https://tse2.mm.bing.net/th/id/OIP.qJ8-d3vSGTqPn0IGMa94agHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"
+                        }} />
                 </div>
-            </div>
+            </div >
         </>
     )
 }

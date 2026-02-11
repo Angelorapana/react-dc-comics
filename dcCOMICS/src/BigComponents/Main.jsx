@@ -1,6 +1,10 @@
 
-import GRUPPOCARD from "../components/GruppoCard";
+import { Button } from "bootstrap";
+import GruppoCard from "../components/GruppoCard";
 import Info from "../components/Info";
+import SingolaCard from "../components/SingolaCard";
+import "./Main.css";
+
 
 
 const colonne = [
@@ -55,32 +59,37 @@ const colonne = [
 export default function Main() {
     return (
         <main>
-            <div className="bg-dark text-white py-5">
-                <GRUPPOCARD />
-            </div>
-            <Info />
 
-            <div className="bg-dc text-white py-5">
-                <div className="container ">
-                    <div className="row">
+            <div className="text-white bg-comics"> </div>
+            <div className="container bg-dark">
+                <button className="btn btn-primary fw-bold bposition">
+                    CURRENT SERIES
+                </button>
 
-                        {colonne.map((column) => (
-                            <div key={column.id} className="col-6 col-md-3">
-                                <h6 className="fw-bold">{column.titolo}</h6>
-                                <ul className="list-unstyled text-secondary small">
-                                    {column.sezioni.map((link, i) => (
-                                        <li key={i}>{link}</li>
-                                    ))}
-                                </ul>
-                            </div>
-                        ))}
+                <GruppoCard />
 
-                    </div>
+                <button className="btn btn-primary fw-bold bpositionend">
+                    LOAD MORE
+                </button>
+                <div className="mt-5">
+                    <Info />
                 </div>
             </div>
 
-
-
-        </main>
-    )
+            <div className="container bg-dc text-white">
+                <div className="row">
+                    {colonne.map((column) => (
+                        <div key={column.id} className="col-6 mt-5">
+                            <h6 className="fw-bold">{column.titolo}</h6>
+                            <ul className="list-unstyled text-secondary small">
+                                {column.sezioni.map((link, i) => (
+                                    <li key={i}>{link}</li>
+                                ))}
+                            </ul>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </main >
+    );
 }

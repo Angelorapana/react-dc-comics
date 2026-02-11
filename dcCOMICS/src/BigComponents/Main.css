@@ -1,5 +1,25 @@
 .bg-dc {
-    background-image: url("/img/footer-bg.jpg");
+    background-image: url("../assets/footer-bg.jpg");
     background-size: cover;
     background-position: center;
+}
+
+.bg-comics {
+    background-image: url("../assets/jumbotron.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 400px;
+    position: relative;
+}
+
+.bposition {
+    position: absolute;
+    bottom: 224px;
+    left: 90px;
+}
+
+.bpositionend {
+    position: absolute;
+    top: 1610px;
+    left: 750px;
 }

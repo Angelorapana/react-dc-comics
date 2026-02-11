@@ -9,8 +9,9 @@ const info = [
 
 function Info() {
     return (
-        <div className="bg-primary py-4">
-            <div className="container">
+
+        <div className="bg-primary">
+            <div className="container py-4">
                 <ul className="list-unstyled d-flex justify-content-between align-items-center mb-0">
                     {info.map(item => (
                         <li key={item.id}

@@ -12,11 +12,6 @@ function App() {
     <>
       <div className="container">
         <Header />
-        <SingolaCard datiCard={{
-          title: "HOLAOLALA",
-          thumb: "https://magazine.arcaplanet.it/wp-content/uploads/2022/11/razza_cane_shiba_inu.png"
-        }} />
-
         <Main />
         <Footer />
       </div>
