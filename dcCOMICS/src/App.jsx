@@ -1,21 +1,28 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import "./components/Main.css";
-import Header from './components/Header'
-import Main from './components/Main'
-import Footer from './components/Footer'
-
+import "./BigComponents/Main.css";
+import Header from './BigComponents/Header'
+import Main from './BigComponents/Main'
+import Footer from './BigComponents/Footer';
+import SingolaCard from './components/SingolaCard';
 
 
 function App() {
 
   return (
     <>
-      <Header />
-      <Main />
-      <Footer />
+      <div className="container">
+        <Header />
+        <SingolaCard datiCard={{
+          title: "HOLAOLALA",
+          thumb: "https://magazine.arcaplanet.it/wp-content/uploads/2022/11/razza_cane_shiba_inu.png"
+        }} />
+
+        <Main />
+        <Footer />
+      </div>
     </>
   )
 }
 
 
-export default App
+export default App;
