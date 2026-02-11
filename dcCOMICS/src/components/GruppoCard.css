@@ -1,0 +1,24 @@
+.bg-comics {
+    background-image: url("./dcCOMICS/public/img/footer-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 400px;
+}
+
+.bg-dark .card {
+    background: transparent;
+}
+
+.bg-dark .card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.bg-dark .card-title {
+    font-size: 0.75rem;
+    margin-top: 0.5rem;
+    text-transform: uppercase;
+}
